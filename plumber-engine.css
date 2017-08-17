@@ -1,0 +1,599 @@
+.no-touch .hand {
+	cursor: pointer;
+}
+.nonselect,
+.hand {
+	-webkit-user-select: none;
+	   -moz-user-select: none;
+	    -ms-user-select: none;
+	     -o-user-select: none;
+	        user-select: none;
+}
+
+.touchscroll {
+	-webkit-overflow-scrolling: touch;
+	   -moz-overflow-scrolling: touch;
+	    -ms-overflow-scrolling: touch;
+	     -o-overflow-scrolling: touch;
+	        overflow-scrolling: touch;
+}
+
+.void {
+	display: none !important;
+}
+
+.clearfix:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+.absmid {
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	margin: auto;
+}
+
+.crosshair {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 1;
+	pointer-events: none;
+}
+.crosshair:before {
+	content: "";
+	position: absolute;
+	left: 50%;
+	height: 100%;
+	border-left: 1px solid black;
+}
+.crosshair:after {
+	content: "";
+	position: absolute;
+	top: 50%;
+	width: 100%;
+	border-top: 1px solid black;
+}
+
+.out-01 {
+	-webkit-transition: all 100ms ease-out;
+	   -moz-transition: all 100ms ease-out;
+	    -ms-transition: all 100ms ease-out;
+	     -o-transition: all 100ms ease-out;
+	        transition: all 100ms ease-out;
+}
+
+.out-02 {
+	-webkit-transition: all 200ms ease-out;
+	   -moz-transition: all 200ms ease-out;
+	    -ms-transition: all 200ms ease-out;
+	     -o-transition: all 200ms ease-out;
+	        transition: all 200ms ease-out;
+}
+
+.out-03 {
+	-webkit-transition: all 300ms ease-out;
+	   -moz-transition: all 300ms ease-out;
+	    -ms-transition: all 300ms ease-out;
+	     -o-transition: all 300ms ease-out;
+	        transition: all 300ms ease-out;
+}
+
+.out-05 {
+	-webkit-transition: all 500ms ease-out;
+	   -moz-transition: all 500ms ease-out;
+	    -ms-transition: all 500ms ease-out;
+	     -o-transition: all 500ms ease-out;
+	        transition: all 500ms ease-out;
+}
+
+.slow-01 {
+	-webkit-transition: all 100ms ease-in-out;
+	   -moz-transition: all 100ms ease-in-out;
+	    -ms-transition: all 100ms ease-in-out;
+	     -o-transition: all 100ms ease-in-out;
+	        transition: all 100ms ease-in-out;
+}
+
+.slow-02 {
+	-webkit-transition: all 200ms ease-in-out;
+	   -moz-transition: all 200ms ease-in-out;
+	    -ms-transition: all 200ms ease-in-out;
+	     -o-transition: all 200ms ease-in-out;
+	        transition: all 200ms ease-in-out;
+}
+
+.slow-03 {
+	-webkit-transition: all 300ms ease-in-out;
+	   -moz-transition: all 300ms ease-in-out;
+	    -ms-transition: all 300ms ease-in-out;
+	     -o-transition: all 300ms ease-in-out;
+	        transition: all 300ms ease-in-out;
+}
+
+.slow-05 {
+	-webkit-transition: all 500ms ease-in-out;
+	   -moz-transition: all 500ms ease-in-out;
+	    -ms-transition: all 500ms ease-in-out;
+	     -o-transition: all 500ms ease-in-out;
+	        transition: all 500ms ease-in-out;
+}
+.plumber {
+	padding: 0;
+	margin: 0;
+	font-family: Arial, sans-serif;
+	font-size: 10px;
+}
+
+/*
+.hand:hover {
+	background-color: #aaa;
+}
+*/
+
+.ui {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+
+.ui .viewport {
+	position: absolute;
+	left: 0;
+	top: 90px;
+	width: 100%;
+	bottom: 20px;
+	background-color: #d9d9d9;
+}
+
+
+.canvas-main {
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+
+
+body .dg.ac {
+}
+body .dg.main {
+	position: absolute;
+	right: 0;
+	margin: auto;
+	z-index: 2;
+	overflow: visible;
+}
+body .dg .close-button {
+	display: none;
+}
+
+
+.view-3 {
+	position: absolute;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	overflow: hidden;
+	z-index: 0;
+}
+.view-3 canvas {
+	position: absolute;
+	left: 0;
+	top: 0;
+	-webkit-user-select: none;
+	   -moz-user-select: none;
+	    -ms-user-select: none;
+	     -o-user-select: none;
+	        user-select: none;
+}
+
+.view-3.hover {
+	cursor: crosshair;
+}
+.view-3.drag {
+	cursor: -webkit-grab;
+	cursor:    -moz-grab;
+	cursor:     -ms-grab;
+	cursor:      -o-grab;
+	cursor:         grab;
+}
+.view-3.down {
+	cursor: -webkit-grabbing;
+	cursor:    -moz-grabbing;
+	cursor:     -ms-grabbing;
+	cursor:      -o-grabbing;
+	cursor:         grabbing;
+}
+
+.view-3.first-person:after {
+	content: "";
+	position: absolute;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	margin: auto;
+	width: 5px;
+	height: 5px;
+	padding: 0px;
+	border-radius: 50%;
+	border: 1px solid rgba(255, 255, 255, 1.0);
+	//background-color: rgba(255, 255, 255, 0.8);
+	//background-clip: content-box;
+}
+
+
+
+.tip {
+	position: absolute;
+	border: 1px solid #888;
+	box-shadow: 1px 1px 5px 0 rgba(0, 0, 0, 0.3);
+	z-index: 2;
+}
+.tip-content {
+	background-color: white;
+}
+.tip-arrow {
+	position: absolute;
+	margin-top: -8px;
+	margin-left: -8px;
+	margin-top: -10px;
+	margin-left: -10px;
+	width: 16px;
+	height: 16px;
+	border: 1px solid #888;
+	box-sizing: border-box;
+	background-color: white;
+
+	-webkit-transform: rotate(45deg);
+	   -moz-transform: rotate(45deg);
+	    -ms-transform: rotate(45deg);
+	     -o-transform: rotate(45deg);
+	        transform: rotate(45deg);
+
+	z-index: -1;
+}
+
+
+
+.submenu {
+}
+.submenu-item {
+	// float: left;
+
+	width: 250px;
+	height: 42px;
+	//margin: 4px 0 0 4px;
+}
+.submenu-item:hover {
+	background-color: #eee;
+}
+.submenu-item.active {
+	background-color: #eee;
+}
+.submenu-item svg {
+	width: 100%;
+	height: 100%;
+
+	fill: #333;
+}
+.submenu-item.active svg {
+	fill: #0a63ae;
+}
+
+
+.view-clear {
+	position: absolute;
+	top: 21px;
+	right: 24px;
+	width: 62px;
+	height: 62px;
+	border-radius: 50%;
+	fill: #537078;
+}
+.view-clear svg {
+	width: 26px;
+	height: 26px;
+}
+.view-clear:hover {
+	background-color: #537078;
+	fill: white;
+}
+
+
+
+
+.split-view-message {
+	position: absolute;
+	padding: 8px 12px;
+	font: 14px Arial, sans-serif;
+	color: #537078;
+	background-color: #ebeff2;
+	border: 1px solid #537078;
+	border-radius: 2px;
+	z-index: 4;
+}
+
+
+.empty-view-message {
+	background-color: #ebeff2;
+	z-index: 5;
+}
+.empty-view-message.hidden {
+	opacity: 0;
+	visibility: hidden;
+}
+.empty-view-message-center {
+	width: 500px;
+	height: 280px;
+	border: 1px solid #d0d8db;
+}
+.empty-view-message-frame {
+	width: 468px;
+	height: 248px;
+	border: 1px dashed #abafb2;
+}
+.empty-view-message-text {
+	width: 260px;
+	height: 132px;
+	text-align: center;
+	text-transform: uppercase;
+	font-size: 32px;
+	color: #537078;
+}
+
+
+
+.prompt {
+	z-index: 4;
+}
+.prompt .tip-content {
+	padding: 12px;
+	text-align: center;
+}
+.prompt-text {
+	text-align: center;
+	margin: 8px 8px 18px;
+	font-size: 14px;
+}
+.prompt-button {
+	display: inline-block;
+	text-align: center;
+	min-width: 32px;
+	padding: 8px 14px 8px 14px;
+	margin: 4px;
+	font-size: 14px;
+	background-color: #296fd6;
+	border-left: 3px solid #102e84;
+	color: #fff;
+}
+.prompt-button:hover {
+	background-color: #083f84;
+	border-left-color: #000;
+}
+
+
+
+.view-preloader-box {
+	width: 130px;
+	height: 25px;
+	border: 1px solid #333;
+	pointer-events: none;
+	padding: 0 1px 1px 0;
+}
+.view-preloader-box.hidden {
+	visibility: hidden;
+	opacity: 0;
+}
+.view-preloader-block {
+	display: inline-block;
+	width: 12px;
+	height: 24px;
+	background-color: #333;
+	margin: 1px 0 0 1px;
+}
+.tile-view {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	z-index: 0;
+}
+
+.tile-client {
+	position: absolute;
+	overflow: hidden;
+}
+
+.tile-helper {
+	position: absolute;
+	background-color: #537078;
+	background-clip: content-box;
+	z-index: 3;
+}
+.tile-helper-vertical {
+	border-top: 2px solid transparent;
+	border-bottom: 2px solid transparent;
+	margin-top: -3px;
+	cursor: row-resize;
+}
+.tile-helper-horizontal {
+	border-left: 2px solid transparent;
+	border-right: 2px solid transparent;
+	margin-left: -3px;
+	cursor: col-resize;
+}
+.tile-helper:hover {
+}
+
+
+.tile-client-test {
+
+}
+.tile-client-index,
+.tile-client-size {
+	width: 120px;
+	height: 32px;
+	line-height: 36px;
+	text-align: center;
+	font-family: monospace;
+}
+.tile-client-index {
+	font-size: 36px;
+	bottom: 24px;
+}
+.tile-client-size {
+	font-size: 24px;
+	top: 48px;
+}
+.marker-system {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	z-index: 0;
+	pointer-events: none;
+}
+
+
+
+.marker {
+	position: absolute;
+	z-index: 2;
+}
+.marker-content {
+	//position: absolute;
+
+	color: black;
+	box-shadow: 1px 1px 5px 0 rgba(0, 0, 0, 0.3);
+
+	pointer-events: auto;
+}
+.marker-arrow {
+	position: absolute;
+	width: 0;
+	height: 0;
+	z-index: -1;
+}
+.marker-arrow-line {
+	width: 0;
+	height: 0;
+	position: absolute;
+	box-shadow: 1px 1px 2px 0 rgba(0, 0, 0, 0.5);
+}
+.marker-depth-line {
+	position: absolute;
+}
+
+.marker-group {
+	width: 64px;
+	height: 64px;
+	line-height: 60px;
+	font-family: Arial, sans-serif;
+	font-size: 52px;
+	text-align: center;
+}
+.marker-group svg {
+	width: 42px;
+	height: 42px;
+	margin: 11px;
+}
+.marker-info {
+	display: none;
+	font-family: monospace;
+	font-size: 14px;
+	padding: 8px 10px;
+}
+.marker-system.debug .marker-group {
+	display: none !important;
+}
+.marker-system.debug .marker-info {
+	display: block !important;
+}
+
+.marker-action {
+	display: inline-block;
+	padding: 12px;
+	background-color: #ebeff2;
+	background-color: white;
+	fill: #537078;
+}
+.marker-action svg {
+	width: 32px;
+	height: 32px;
+}
+.marker-action:hover {
+	background-color: #537078;
+	fill: #ebeff2;
+}
+
+
+.marker .marker-interactive {
+	color: #9ba9b2;
+	fill: #9ba9b2;
+	//stroke: #ebeff2;
+	//background-color: #ebeff2;
+	stroke: #fff;
+	background-color: #fff;
+	transition-property: color, background-color, stroke, fill;
+}
+
+.marker.connected .marker-interactive {
+	color: white;
+	fill: white;
+	stroke: skyblue;
+	background-color: skyblue;
+}
+.marker.connected.master .marker-interactive {
+	color: white;
+	fill: white;
+	stroke: tomato;
+	background-color: tomato;
+}
+
+.marker:hover {
+	z-index: 10000 !important;
+}
+.marker:hover .marker-delete svg {
+	//fill: tomato;
+}
+
+.marker:hover .marker-interactive {
+	color: #84b171;
+	fill: #84b171;
+	stroke: #bfffaf;
+	background-color: #bfffaf;
+}
+
+.marker.selected .marker-interactive {
+	color: white;
+	fill: white;
+	stroke: #58e85d;
+	background-color: #58e85d;
+}
+
+.marker.connected .marker-interactive,
+.marker.inactive  .marker-interactive {
+	color: #bbc4c9;
+	fill: #bbc4c9;
+	stroke: #cfd8dd;
+	background-color: #cfd8dd;
+	pointer-events: none;
+}
+.marker svg.marker-interactive {
+	background-color: transparent !important;
+}
