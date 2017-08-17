@@ -1,0 +1,13 @@
+{
+	"name": "plumber-engine",
+	"description": "screwing nuts since 2017",
+	"main": [
+		"build/plumber-engine.js",
+		"build/plumber-engine.css",
+		"build/plumber-atlas.svg",
+		"build/plumber-cubemap.png"
+	],
+	"authors": [
+		"freestlr freestlr@gmail.com"
+	]
+}
