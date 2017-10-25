@@ -197,6 +197,7 @@ body .dg .property-name {
 	font-size: 22px;
 	text-align: center;
 	box-sizing: border-box;
+	z-index: 4;
 }
 .plumber .vp-button svg {
 	width: 24px;
@@ -241,6 +242,10 @@ body .dg .property-name {
 .plumber .vp-button-explode svg {
 	width: 28px;
 	height: 28px;
+}
+.plumber .vp-button-explode svg {
+	top: 2px;
+	left: 2px;
 }
 
 
