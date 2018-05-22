@@ -214,42 +214,42 @@ body .dg .property-name {
 	fill: white;
 	color: white;
 }
-.plumber .vp-button-explode {
-	right: 70px;
-	bottom: 20px;
-}
-.plumber .vp-button-zoom-in {
+.plumber .vp-button.zoom_in {
 	right: 20px;
 	bottom: 120px;
 }
-.plumber .vp-button-zoom-out {
+.plumber .vp-button.zoom_out {
 	right: 20px;
 	bottom: 70px;
 }
-.plumber .vp-button-zoom-fit {
+.plumber .vp-button.zoom_fit {
 	right: 20px;
 	bottom: 20px;
 }
-.plumber .vp-button-screenshot {
+.plumber .vp-button.explode {
+	right: 70px;
+	bottom: 20px;
+}
+.plumber .vp-button.screenshot {
 	right: 120px;
 	bottom: 20px;
 }
-.plumber .vp-button-rotate {
+.plumber .vp-button.rotate {
 	left: 20px;
 	top: 20px;
 }
-.plumber.mode-constructor .vp-button-explode {
+.plumber.mode-constructor .vp-button.explode {
 	right: 20px;
 }
-.plumber .vp-button-rotate svg,
-.plumber .vp-button-explode svg {
+.plumber .vp-button.rotate svg,
+.plumber .vp-button.explode svg {
 	width: 28px;
 	height: 28px;
 }
 
 
 .plumber .vp-menu {
-	position: absolute;
+
 }
 .plumber .vp-menu .vp-button {
 	position: relative;
@@ -258,10 +258,12 @@ body .dg .property-name {
 	margin: 5px;
 }
 .plumber .vp-menu-display {
+	position: absolute;
 	left: 15px;
 	top: 65px;
 }
 .plumber .vp-menu-projection {
+	position: absolute;
 	left: 15px;
 	top: 115px;
 }
@@ -328,6 +330,7 @@ body .dg .property-name {
 	position: absolute;
 	border: 1px solid #888;
 	box-shadow: 1px 1px 5px 0 rgba(0, 0, 0, 0.3);
+	box-sizing: border-box;
 	z-index: 2;
 }
 .tip-content {
@@ -337,8 +340,6 @@ body .dg .property-name {
 	position: absolute;
 	margin-top: -8px;
 	margin-left: -8px;
-	margin-top: -10px;
-	margin-left: -10px;
 	width: 16px;
 	height: 16px;
 	border: 1px solid #888;
@@ -447,11 +448,16 @@ body .dg .property-name {
 .prompt {
 	z-index: 4;
 }
+.prompt,
+.prompt .tip-arrow {
+	border-color: #167d6c;
+}
 .prompt .tip-content {
 	padding: 12px;
 	text-align: center;
 }
-.prompt-text {
+.prompt-text,
+.prompt .tip-content > .block-label {
 	text-align: center;
 	margin: 8px 8px 18px;
 	font-size: 14px;
@@ -463,29 +469,34 @@ body .dg .property-name {
 	padding: 8px 14px 8px 14px;
 	margin: 4px;
 	font-size: 14px;
-	background-color: #296fd6;
-	border-left: 3px solid #102e84;
+	background-color: #083f84;
+	background-color: #198875;
+	border-left: 3px solid #000;
+	border-left: 3px solid #064a3f;
 	color: #fff;
+	color: #e8e8e8;
 }
 .prompt-button:hover {
-	background-color: #083f84;
-	border-left-color: #000;
+	background-color: #296fd6;
+	background-color: #34a592;
+	border-left-color: #102e84;
+	border-left-color: #167d6c;
 }
 
 
 
-.view-preloader-box {
+.loading-box {
 	width: 130px;
 	height: 25px;
 	border: 1px solid #546f7a;
 	pointer-events: none;
 	padding: 0 1px 1px 0;
 }
-.view-preloader-box.hidden {
+.loading-box.hidden {
 	visibility: hidden;
 	opacity: 0;
 }
-.view-preloader-block {
+.loading-block {
 	display: inline-block;
 	width: 12px;
 	height: 24px;
@@ -644,6 +655,10 @@ body .dg .property-name {
 	background-color: #537078;
 	fill: #ebeff2;
 }
+.marker-action.active {
+	background-color: #1a5d6f;
+	fill: #ebeff2;
+}
 
 
 .marker .marker-interactive {
@@ -695,6 +710,7 @@ body .dg .property-name {
 	fill: #a4aeb3;
 	stroke: #cfd8dd;
 	background-color: #cfd8dd;
+	pointer-events: none;
 }
 .marker svg.marker-interactive {
 	background-color: transparent !important;
