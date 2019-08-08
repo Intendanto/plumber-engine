@@ -2,6 +2,6 @@
 	"name": "plumber-engine",
   	"version": "1.0.0",
 	"dependencies": {
-    		"three": "^0.107.0",
+    		"three": "^0.107.0"
   	}
 }
