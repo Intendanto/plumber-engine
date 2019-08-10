@@ -112,7 +112,7 @@ function TDimensions() {
   this.box = new THREE.Box3, this.sphere = new THREE.Sphere, this.center = new THREE.Vector3, this.size = new THREE.Vector3, this.length = 1, this.mass = 0
 }
 
-f = {}, f.nop = function () {
+window.f = {}, f.nop = function () {
 }, f.identity = function (e) {
   return e
 }, f.nextprime = function (e) {
@@ -584,7 +584,8 @@ f = {}, f.nop = function () {
   }
 }), window.requestAnimationFrame = window.requestAnimationFrame || window.ORequestAnimationFrame || window.msRequestAnimationFrame || window.mozRequestAnimationFrame || window.webkitRequestAnimationFrame || function (e) {
   return setTimeout(e, 1e3 / 60)
-}, window.cancelAnimationFrame = window.cancelAnimationFrame || window.OCancelAnimationFrame || window.msCancelAnimationFrame || window.mozCancelAnimationFrame || window.webkitCancelAnimationFrame || window.clearTimeout, dom = {}, dom.one = function (e, t) {
+}, window.cancelAnimationFrame = window.cancelAnimationFrame || window.OCancelAnimationFrame || window.msCancelAnimationFrame || window.mozCancelAnimationFrame || window.webkitCancelAnimationFrame || window.clearTimeout,
+  window.dom = {}, dom.one = function (e, t) {
   return (t || document).querySelector(e)
 }, dom.all = function (e, t) {
   return [].slice.call((t || document).querySelectorAll(e))
@@ -720,7 +721,8 @@ f = {}, f.nop = function () {
     "load",
     t
   ))
-},kbd = {
+},
+window.kbd = {
   name: {
     L_ARR: 37,
     U_ARR: 38,
@@ -3144,7 +3146,8 @@ var saveAs = saveAs || function (e) {
   }, stop: function () {
     this.debug && console.log(this.debug, "stop", this.active), this.active && (this.points = [], this.active = !1)
   }
-}, Block = f.unit({
+},
+  window.Block = f.unit({
                     unitName: "Block",
                     etag: "div",
                     ename: "block",
@@ -3636,7 +3639,8 @@ var saveAs = saveAs || function (e) {
     var e = f.hround(this.value * this.barWidth);
     dom.xstyle(this.pos, "transform", "translateX(" + e + "px)")
   }
-}), Atlas = {
+}),
+  window.Atlas = {
   svg: null, list: null, items: [], setSource: function (e) {
     if (e) {
       Atlas.svg = e.documentElement || e, Atlas.svg.removeAttribute("width"), Atlas.svg.removeAttribute("height"), Atlas.list = {};
@@ -3674,7 +3678,7 @@ var saveAs = saveAs || function (e) {
     var i = Atlas.svg.cloneNode(!1);
     return i.appendChild(t.cloneNode(!0)), i.className.baseVal = e, i
   }
-}, Locale = {
+}, window.Locale = {
   name: null, data: null, counter: 0, assets: {}, items: [], add: function (e, t) {
     var i = Locale.assets[e];
     i || (i = Locale.assets[e] = {});
@@ -6414,7 +6418,8 @@ var saveAs = saveAs || function (e) {
       this.normal.clone().setLength(20)
     ), e.geometry.colors.push(new THREE.Color(0, 0, 0), new THREE.Color(1, 0, 0)), e.position.copy(this.point), e
   }
-}, View3 = f.unit({
+},
+  window.View3 = f.unit({
                     unitName: "View3",
                     ename: "view-3",
                     enableRender: !0,
@@ -7030,7 +7035,7 @@ var saveAs = saveAs || function (e) {
     r.stencilFunc(r.ALWAYS, +this.stencilValue || 0, 255)
   }
 }, THREE.Object3D.prototype.onAfterRender = function (e, t, i, n, o, s) {
-}, TNode = f.unit({
+}, window.TNode = f.unit({
                     unitName: "TNode", init: function (e) {
     this.object = new THREE.Object3D, this.events = new EventEmitter, this.local = new TDimensions, this.meshes = [], this.connections = [], this.setId(
       ++TNode.count), e ? this.setSample(e) : console.warn("new TNode with no sample")
@@ -7207,7 +7212,7 @@ var saveAs = saveAs || function (e) {
       0
     )), e.box.getSize(e.size), e.length = e.size.length(), e.mass = e.size.x * e.size.y * e.size.z
   }
-                  }), TNode.count = 0, TNode.TRSTOP = {}, TConnection = f.unit({
+                  }), TNode.count = 0, TNode.TRSTOP = {}, window.TConnection = f.unit({
                                                                                  unitName: "TConnection",
                                                                                  transitionStages: null,
                                                                                  transitionTime: null,
@@ -7458,7 +7463,8 @@ var saveAs = saveAs || function (e) {
                                                                                    this.control && (this.control.detach(), this.node.object.remove(
                                                                                      this.controlObject), delete this.controlObject, delete this.control)
                                                                                  }
-                                                                               }), TSerial = {
+                                                                               }),
+  window.TSerial = {
   toJSON: function (e) {
     if (!e) return null;
     var t = [], i = [], n = [], o = [];
@@ -7569,7 +7575,7 @@ var saveAs = saveAs || function (e) {
                                                                                       });
     return a
   }
-}, UI = f.unit({unitName: "UI"}), UI.Prompt = f.unit(
+}, window.UI = f.unit({unitName: "UI"}), UI.Prompt = f.unit(
   Block.Tip,
   {
     unitName: "Block_Tip",
@@ -7840,7 +7846,7 @@ var saveAs = saveAs || function (e) {
       }
     }
   }
-), Plumber = f.unit({
+), window.Plumber = f.unit({
                       unitName: "Plumber",
                       version: 5,
                       mode: "constructor",
