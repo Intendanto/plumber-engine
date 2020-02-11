@@ -320,8 +320,8 @@ body .dg .property-name {
 	padding: 0px;
 	border-radius: 50%;
 	border: 1px solid rgba(255, 255, 255, 1.0);
-	//background-color: rgba(255, 255, 255, 0.8);
-	//background-clip: content-box;
+	/*//background-color: rgba(255, 255, 255, 0.8);*/
+	/*//background-clip: content-box;*/
 }
 
 
@@ -360,11 +360,11 @@ body .dg .property-name {
 .submenu {
 }
 .submenu-item {
-	// float: left;
+	/*// float: left;*/
 
 	width: 250px;
 	height: 42px;
-	//margin: 4px 0 0 4px;
+	/*//margin: 4px 0 0 4px;*/
 }
 .submenu-item:hover {
 	background-color: #eee;
@@ -577,7 +577,7 @@ body .dg .property-name {
 	z-index: 2;
 }
 .marker-content {
-	//position: absolute;
+	/*//position: absolute;*/
 
 	color: black;
 	box-shadow: 1px 1px 5px 0 rgba(0, 0, 0, 0.3);
@@ -664,8 +664,8 @@ body .dg .property-name {
 .marker .marker-interactive {
 	color: #9ba9b2;
 	fill: #9ba9b2;
-	//stroke: #ebeff2;
-	//background-color: #ebeff2;
+	/*//stroke: #ebeff2;*/
+	/*//background-color: #ebeff2;*/
 	stroke: #fff;
 	background-color: #fff;
 	transition-property: color, background-color, stroke, fill;
@@ -688,7 +688,7 @@ body .dg .property-name {
 	z-index: 10000 !important;
 }
 .marker:hover .marker-delete svg {
-	//fill: tomato;
+	/*//fill: tomato;*/
 }
 
 .marker:hover .marker-interactive {
